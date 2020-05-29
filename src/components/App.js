@@ -2,14 +2,14 @@ import React from 'react';
 import Header from './Header';
 import Sidebar from './Sidebar';
 import Footer from './Footer';
-import Question from './Question';
+import QuestionTable from './QuestionTable';
 
 const App = () => {
   return (
     <div>
       <Header />
       <Sidebar />
-      <Question />
+      <QuestionTable />
       <Footer />
     </div>
   );
