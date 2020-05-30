@@ -153,7 +153,7 @@ const Sidebar = () => {
                 <li className='nav-item'>
                   <a href='pages/charts/chartjs.html' className='nav-link'>
                     <i className='far fa-circle nav-icon' />
-                    <p>ChartJS</p>
+                    <p>Create New Question</p>
                   </a>
                 </li>
                 <li className='nav-item'>

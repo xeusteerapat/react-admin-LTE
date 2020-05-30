@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import dayjs from 'dayjs';
 
 import axios from '../config/axios.config';
@@ -15,15 +16,17 @@ const QuestionTable = () => {
     fetchData();
   }, []);
 
-  const deleteQuestion = async (id) => {
+  const deleteQuestion = async id => {
     await axios.delete(`/question/questions/${id}`);
     fetchData();
   };
 
-  const questionTable = questions.map((question) => (
+  const questionTable = questions.map(question => (
     <tr key={question.id}>
       <td>{question.id}</td>
-      <td>{question.question}</td>
+      <td>
+        <Link to={`/question/${question.id}`}>{question.question}</Link>
+      </td>
       <td>{dayjs(question.updatedAt).format('YYYY-MMMM-DD HH:mm a')}</td>
       <td>
         <button
