@@ -12,6 +12,7 @@ const QuestionDetail = ({ id }) => {
 
   useEffect(() => {
     getQuestion();
+    // eslint-disable-next-line
   }, []);
 
   return (
