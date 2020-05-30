@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
-import dayjs from 'dayjs';
-
+import Question from './Question';
 import axios from '../config/axios.config';
 
 const QuestionTable = () => {
@@ -21,24 +19,6 @@ const QuestionTable = () => {
     fetchData();
   };
 
-  const questionTable = questions.map(question => (
-    <tr key={question.id}>
-      <td>{question.id}</td>
-      <td>
-        <Link to={`/question/${question.id}`}>{question.question}</Link>
-      </td>
-      <td>{dayjs(question.updatedAt).format('YYYY-MMMM-DD HH:mm a')}</td>
-      <td>
-        <button
-          className='btn btn-danger'
-          onClick={() => deleteQuestion(question.id)}
-        >
-          Delete
-        </button>
-      </td>
-    </tr>
-  ));
-
   return (
     <div className='content-wrapper'>
       <h1>All questions</h1>
@@ -52,7 +32,17 @@ const QuestionTable = () => {
               <th>Action</th>
             </tr>
           </thead>
-          <tbody>{questionTable}</tbody>
+          <tbody>
+            {questions.map(question => (
+              <Question
+                key={question.id}
+                id={question.id}
+                question={question.question}
+                deleteQuestion={deleteQuestion}
+                updatedAt={question.updatedAt}
+              />
+            ))}
+          </tbody>
         </table>
       </div>
     </div>

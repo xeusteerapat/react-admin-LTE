@@ -1,7 +1,19 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import axios from '../config/axios.config';
 
 const QuestionDetail = ({ id }) => {
+  const [question, setQuestion] = useState({});
+
+  const getQuestion = async () => {
+    const response = await axios.get(`/question/questions/${id}`);
+    setQuestion(response.data);
+  };
+
+  useEffect(() => {
+    getQuestion();
+  }, []);
+
   return (
     <div className='content-wrapper'>
       {/* Content Header (Page header) */}
@@ -28,7 +40,7 @@ const QuestionDetail = ({ id }) => {
         {/* Default box */}
         <div className='card'>
           <div className='card-header'>
-            <h3 className='card-title'>Question Title</h3>
+            <h3 className='card-title'>{question.question}</h3>
             <div className='card-tools'>
               <button
                 type='button'
