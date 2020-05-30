@@ -6,14 +6,19 @@ import axios from '../config/axios.config';
 const QuestionTable = () => {
   const [questions, setQuestions] = useState([]);
 
-  const getQuestions = async () => {
+  const fetchData = async () => {
     const response = await axios.get('/question/questions');
     setQuestions(response.data);
   };
 
   useEffect(() => {
-    getQuestions();
+    fetchData();
   }, []);
+
+  const deleteQuestion = async (id) => {
+    await axios.delete(`/question/questions/${id}`);
+    fetchData();
+  };
 
   const questionTable = questions.map((question) => (
     <tr key={question.id}>
@@ -21,7 +26,12 @@ const QuestionTable = () => {
       <td>{question.question}</td>
       <td>{dayjs(question.updatedAt).format('YYYY-MMMM-DD HH:mm a')}</td>
       <td>
-        <button className='btn btn-danger'>Delete</button>
+        <button
+          className='btn btn-danger'
+          onClick={() => deleteQuestion(question.id)}
+        >
+          Delete
+        </button>
       </td>
     </tr>
   ));
