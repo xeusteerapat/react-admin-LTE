@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import Question from './Question';
 import axios from '../config/axios.config';
 
@@ -21,8 +22,11 @@ const QuestionTable = () => {
 
   return (
     <div className='content-wrapper'>
-      <h1>All questions</h1>
       <div className='card-body'>
+        <h1>All Questions</h1>
+        <Link to='/addquestion' className='btn btn-primary my-2'>
+          Add New Question
+        </Link>
         <table className='table table-bordered table-hover'>
           <thead>
             <tr>
