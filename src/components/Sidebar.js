@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Sidebar = () => {
   return (
@@ -11,7 +12,9 @@ const Sidebar = () => {
           className='brand-image img-circle elevation-3'
           style={{ opacity: '.8' }}
         />
-        <span className='brand-text font-weight-light'>AdminLTE 3</span>
+        <span className='brand-text font-weight-light'>
+          Getcode Career Test
+        </span>
       </a>
       {/* Sidebar */}
       <div className='sidebar'>
@@ -26,7 +29,7 @@ const Sidebar = () => {
           </div>
           <div className='info'>
             <a href='/' className='d-block'>
-              Alexander Pierce
+              Sonter
             </a>
           </div>
         </div>
@@ -142,19 +145,19 @@ const Sidebar = () => {
               </ul>
             </li>
             <li className='nav-item has-treeview'>
-              <a href='/' className='nav-link'>
+              <Link to='/questions' className='nav-link'>
                 <i className='nav-icon fas fa-question-circle' />
                 <p>
                   Questions
                   <i className='right fas fa-angle-left' />
                 </p>
-              </a>
+              </Link>
               <ul className='nav nav-treeview'>
                 <li className='nav-item'>
-                  <a href='pages/charts/chartjs.html' className='nav-link'>
+                  <Link to='/addquestion' className='nav-link'>
                     <i className='far fa-circle nav-icon' />
                     <p>Create New Question</p>
-                  </a>
+                  </Link>
                 </li>
                 <li className='nav-item'>
                   <a href='pages/charts/flot.html' className='nav-link'>

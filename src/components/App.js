@@ -5,6 +5,7 @@ import Sidebar from './Sidebar';
 import Footer from './Footer';
 import QuestionTable from './QuestionTable';
 import QuestionDetail from './QuestionDetail';
+import QuestionForm from './QuestionForm';
 
 const App = () => {
   return (
@@ -12,7 +13,7 @@ const App = () => {
       <Header />
       <Sidebar />
       <Switch>
-        <Route exac path='/questions' component={QuestionTable} />
+        <Route exact path='/questions' component={QuestionTable} />
         <Route
           exac
           path='/question/:id'
@@ -20,6 +21,7 @@ const App = () => {
             <QuestionDetail id={routeProps.match.params.id} />
           )}
         />
+        <Route exact path='/addquestion' component={QuestionForm} />
       </Switch>
       <Footer />
     </BrowserRouter>
