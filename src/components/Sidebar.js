@@ -5,7 +5,7 @@ const Sidebar = () => {
   return (
     <aside className='main-sidebar sidebar-dark-primary elevation-4'>
       {/* Brand Logo */}
-      <a href='index3.html' className='brand-link'>
+      <Link to='/' className='brand-link'>
         <img
           src='dist/img/AdminLTELogo.png'
           alt='AdminLTE Logo'
@@ -15,7 +15,7 @@ const Sidebar = () => {
         <span className='brand-text font-weight-light'>
           Getcode Career Test
         </span>
-      </a>
+      </Link>
       {/* Sidebar */}
       <div className='sidebar'>
         {/* Sidebar user panel (optional) */}
@@ -28,9 +28,9 @@ const Sidebar = () => {
             />
           </div>
           <div className='info'>
-            <a href='/' className='d-block'>
+            <Link href='/' className='d-block'>
               Sonter
-            </a>
+            </Link>
           </div>
         </div>
         {/* Sidebar Menu */}
@@ -43,42 +43,16 @@ const Sidebar = () => {
           >
             {/* Add icons to the links using the .nav-icon class
          with font-awesome or any other icon font library */}
-            <li className='nav-item has-treeview menu-open'>
-              <a href='/' className='nav-link active'>
+            <li className='nav-item'>
+              <Link to='/' className='nav-link active'>
                 <i className='nav-icon fas fa-tachometer-alt' />
-                <p>
-                  Dashboard
-                  <i className='right fas fa-angle-left' />
-                </p>
-              </a>
-              <ul className='nav nav-treeview'>
-                <li className='nav-item'>
-                  <a href='./index.html' className='nav-link'>
-                    <i className='far fa-circle nav-icon' />
-                    <p>Dashboard v1</p>
-                  </a>
-                </li>
-                <li className='nav-item'>
-                  <a href='./index2.html' className='nav-link active'>
-                    <i className='far fa-circle nav-icon' />
-                    <p>Dashboard v2</p>
-                  </a>
-                </li>
-                <li className='nav-item'>
-                  <a href='./index3.html' className='nav-link'>
-                    <i className='far fa-circle nav-icon' />
-                    <p>Dashboard v3</p>
-                  </a>
-                </li>
-              </ul>
+                <p>Dashboard</p>
+              </Link>
             </li>
             <li className='nav-item'>
               <a href='pages/widgets.html' className='nav-link'>
                 <i className='nav-icon fas fa-user' />
-                <p>
-                  User
-                  <span className='right badge badge-danger'>New</span>
-                </p>
+                <p>User</p>
               </a>
             </li>
             <li className='nav-item has-treeview'>
@@ -185,55 +159,25 @@ const Sidebar = () => {
                 <li className='nav-item'>
                   <a href='pages/UI/general.html' className='nav-link'>
                     <i className='far fa-circle nav-icon' />
-                    <p>General</p>
+                    <p>Passion</p>
                   </a>
                 </li>
                 <li className='nav-item'>
                   <a href='pages/UI/icons.html' className='nav-link'>
                     <i className='far fa-circle nav-icon' />
-                    <p>Icons</p>
+                    <p>Mindset</p>
                   </a>
                 </li>
                 <li className='nav-item'>
                   <a href='pages/UI/buttons.html' className='nav-link'>
                     <i className='far fa-circle nav-icon' />
-                    <p>Buttons</p>
-                  </a>
-                </li>
-                <li className='nav-item'>
-                  <a href='pages/UI/sliders.html' className='nav-link'>
-                    <i className='far fa-circle nav-icon' />
-                    <p>Sliders</p>
-                  </a>
-                </li>
-                <li className='nav-item'>
-                  <a href='pages/UI/modals.html' className='nav-link'>
-                    <i className='far fa-circle nav-icon' />
-                    <p>Modals &amp; Alerts</p>
-                  </a>
-                </li>
-                <li className='nav-item'>
-                  <a href='pages/UI/navbar.html' className='nav-link'>
-                    <i className='far fa-circle nav-icon' />
-                    <p>Navbar &amp; Tabs</p>
-                  </a>
-                </li>
-                <li className='nav-item'>
-                  <a href='pages/UI/timeline.html' className='nav-link'>
-                    <i className='far fa-circle nav-icon' />
-                    <p>Timeline</p>
-                  </a>
-                </li>
-                <li className='nav-item'>
-                  <a href='pages/UI/ribbons.html' className='nav-link'>
-                    <i className='far fa-circle nav-icon' />
-                    <p>Ribbons</p>
+                    <p>Skills</p>
                   </a>
                 </li>
               </ul>
             </li>
             <li className='nav-item has-treeview'>
-              <a href='/' className='nav-link'>
+              <a href='/jobs' className='nav-link'>
                 <i className='nav-icon fas fa-briefcase' />
                 <p>
                   Jobs
@@ -242,28 +186,16 @@ const Sidebar = () => {
               </a>
               <ul className='nav nav-treeview'>
                 <li className='nav-item'>
-                  <a href='pages/forms/general.html' className='nav-link'>
+                  <Link href='/jobs' className='nav-link'>
                     <i className='far fa-circle nav-icon' />
-                    <p>General Elements</p>
-                  </a>
+                    <p>All Jobs</p>
+                  </Link>
                 </li>
                 <li className='nav-item'>
-                  <a href='pages/forms/advanced.html' className='nav-link'>
+                  <Link href='/addjobs' className='nav-link'>
                     <i className='far fa-circle nav-icon' />
-                    <p>Advanced Elements</p>
-                  </a>
-                </li>
-                <li className='nav-item'>
-                  <a href='pages/forms/editors.html' className='nav-link'>
-                    <i className='far fa-circle nav-icon' />
-                    <p>Editors</p>
-                  </a>
-                </li>
-                <li className='nav-item'>
-                  <a href='pages/forms/validation.html' className='nav-link'>
-                    <i className='far fa-circle nav-icon' />
-                    <p>Validation</p>
-                  </a>
+                    <p>Create New Jobs</p>
+                  </Link>
                 </li>
               </ul>
             </li>

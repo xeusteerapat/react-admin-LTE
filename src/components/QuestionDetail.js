@@ -64,10 +64,19 @@ const QuestionDetail = ({ id }) => {
             </div>
           </div>
           <div className='card-body'>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est
-            aliquam eum ipsum aperiam laborum nam quos numquam commodi, optio
-            sequi perferendis obcaecati sunt dignissimos veritatis ipsam
-            cupiditate dolor, dicta impedit.
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est
+              aliquam eum ipsum aperiam laborum nam quos numquam commodi, optio
+              sequi perferendis obcaecati sunt dignissimos veritatis ipsam
+              cupiditate dolor, dicta impedit. Lorem ipsum dolor sit amet
+              consectetur adipisicing elit. Repellendus vero asperiores nulla
+              cupiditate, porro error dolore magnam sapiente numquam expedita
+              voluptatum, repudiandae distinctio ut accusamus officia beatae
+              necessitatibus et temporibus! Lorem ipsum dolor sit, amet
+              consectetur adipisicing elit. Quis reiciendis, dolorem adipisci,
+              voluptate, rem beatae aperiam tenetur molestiae qui libero ex
+              aspernatur
+            </p>
           </div>
           {/* /.card-body */}
           <div className='card-footer'>
