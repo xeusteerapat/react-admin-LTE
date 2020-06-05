@@ -20,6 +20,13 @@ const QuestionTable = () => {
     fetchData();
   };
 
+  const updateQuestion = async (id, newQuestion) => {
+    const updatedQuestion = questions.map(q =>
+      q.id === id ? { ...q, question: newQuestion } : q
+    );
+    setQuestions(updatedQuestion);
+  };
+
   return (
     <div className='content-wrapper'>
       <div className='card-body'>
@@ -43,6 +50,7 @@ const QuestionTable = () => {
                 id={question.id}
                 question={question.question}
                 deleteQuestion={deleteQuestion}
+                updateQuestion={updateQuestion}
                 updatedAt={question.updatedAt}
               />
             ))}

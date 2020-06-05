@@ -1,15 +1,30 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import dayjs from 'dayjs';
+import useToggle from '../../hooks/useToggle';
+import EditQuestion from './EditQuestion';
 
-const Question = ({ id, question, deleteQuestion, updatedAt }) => {
+const Question = ({
+  id,
+  question,
+  deleteQuestion,
+  updateQuestion,
+  updatedAt,
+}) => {
+  const [isEdit, toggle] = useToggle();
   return (
     <>
       <tr key={id}>
         <td>{id}</td>
-        <td>
-          <Link to={`/question/${id}`}>{question}</Link>
-        </td>
+        {isEdit ? (
+          <EditQuestion
+            id={id}
+            question={question}
+            updateQuestion={updateQuestion}
+            toggle={toggle}
+          />
+        ) : (
+          <td onDoubleClick={toggle}>{question}</td>
+        )}
         <td>{dayjs(updatedAt).format('YYYY-MMMM-DD HH:mm a')}</td>
         <td>
           <button className='btn btn-danger' onClick={() => deleteQuestion(id)}>
