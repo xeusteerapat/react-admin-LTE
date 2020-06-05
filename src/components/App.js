@@ -3,9 +3,9 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import Header from './Header';
 import Sidebar from './Sidebar';
 import Footer from './Footer';
-import QuestionTable from './QuestionTable';
-import QuestionDetail from './QuestionDetail';
-import QuestionForm from './QuestionForm';
+import QuestionTable from './questions/QuestionTable';
+import QuestionDetail from './questions/QuestionDetail';
+import QuestionForm from './questions/QuestionForm';
 
 const App = () => {
   return (

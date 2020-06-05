@@ -128,6 +128,12 @@ const Sidebar = () => {
               </Link>
               <ul className='nav nav-treeview'>
                 <li className='nav-item'>
+                  <Link to='/questions' className='nav-link'>
+                    <i className='far fa-circle nav-icon' />
+                    <p>All Questions</p>
+                  </Link>
+                </li>
+                <li className='nav-item'>
                   <Link to='/addquestion' className='nav-link'>
                     <i className='far fa-circle nav-icon' />
                     <p>Create New Question</p>

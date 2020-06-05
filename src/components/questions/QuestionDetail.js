@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import axios from '../config/axios.config';
+import axios from '../../config/axios.config';
 
 const QuestionDetail = ({ id }) => {
   const [question, setQuestion] = useState({});
