@@ -1,27 +1,27 @@
 import React from 'react';
 import useForm from '../../hooks/useForm';
 
-const EditForm = ({ id, question, updateQuestion, toggle }) => {
-  const [value, handleChange, reset] = useForm(question);
-
-  const handleSubmit = e => {
-    e.preventDefault();
-    updateQuestion(id, value);
-    reset();
-    toggle();
-  };
+const EditForm = ({ id, question, updateQuestion }) => {
+  const [value, handleChange] = useForm(question);
 
   return (
     <>
-      <input
-        type='text'
-        className='form-control'
-        value={value}
-        onChange={handleChange}
-      />
-      <button className='btn btn-primary' onSubmit={handleSubmit}>
-        Save
-      </button>
+      <td>
+        <form action=''>
+          <input
+            type='text'
+            className='form-control'
+            value={value}
+            onChange={handleChange}
+          />
+          <button
+            className='btn btn-primary'
+            onClick={() => updateQuestion(id, value)}
+          >
+            Save
+          </button>
+        </form>
+      </td>
     </>
   );
 };

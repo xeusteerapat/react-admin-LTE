@@ -21,10 +21,12 @@ const QuestionTable = () => {
   };
 
   const updateQuestion = async (id, newQuestion) => {
-    const updatedQuestion = questions.map(q =>
-      q.id === id ? { ...q, question: newQuestion } : q
-    );
-    setQuestions(updatedQuestion);
+    const body = {
+      question: newQuestion,
+    };
+
+    await axios.put(`/question/questions/${id}`, body);
+    fetchData();
   };
 
   return (
